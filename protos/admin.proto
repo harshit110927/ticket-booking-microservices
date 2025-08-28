@@ -1,0 +1,19 @@
+syntax = "proto3";
+package admin;
+import "common.proto";
+option java_package = "com.booking.admin";
+option java_multiple_files = true;
+
+service AdminService {
+  rpc GetEventDetails(GetEventDetailsRequest) returns (EventDetailsResponse);
+}
+
+message GetEventDetailsRequest {
+  common.UUID event_id = 1;
+}
+message EventDetailsResponse{
+  common.UUID event_id = 1;
+  string event_name = 2;
+  string status = 3; // scheduled, one_sale or cancelled
+  int64 start_time = 4; //timestamp
+}

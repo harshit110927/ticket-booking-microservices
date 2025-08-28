@@ -1,0 +1,20 @@
+// Specifies the version of the Protocol Buffers language we're using.
+syntax = "proto3";
+
+// Defines the package to prevent naming conflicts between different .proto files.
+package common;
+
+// These options specify the Java package where the generated code will live.
+option java_package = "com.booking.common";
+option java_multiple_files = true;
+
+// A standard message for passing around UUIDs. This ensures consistency.
+// We could just use 'string', but this makes the contract clearer.
+message UUID {
+  string value = 1;
+}
+
+// A standard empty message, often used for RPCs that don't need to
+// return any data but still need to signal completion.
+message Empty {
+}

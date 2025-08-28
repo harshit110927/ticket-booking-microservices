@@ -1,0 +1,22 @@
+syntax = "proto3";
+package user;
+import "common.proto";
+
+option java_package = "com.booking.user";
+option java_multiple_files = true;
+
+service UserService{
+  rpc GetUserDetails(GetUserDetailsRequest) returns (UserDetailsResponse);
+}
+
+message GetUserDetailsRequest {
+  common.UUID user_id = 1;
+}
+
+message UserDetailsResponse {
+  common.UUID user_id = 1;
+  common.UUID tenant_id = 2;
+  string user_name = 3;
+  string email = 4;
+  string role = 5;
+}

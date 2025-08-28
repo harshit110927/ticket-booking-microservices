@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.booking</groupId>
-    <artifactId>user-service</artifactId>
+    <artifactId>booking-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>user-service</name>
+    <name>booking-service</name>
     <description>user-service</description>
 
     <properties>
