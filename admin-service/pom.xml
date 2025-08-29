@@ -12,7 +12,7 @@
     <artifactId>admin-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>admin-service</name>
-    <description>user-service</description>
+    <description>admin-service</description>
 
     <properties>
         <java.version>21</java.version>
