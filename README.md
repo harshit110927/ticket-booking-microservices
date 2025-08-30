@@ -20,60 +20,7 @@ Internal Synchronous (gRPC): Services use gRPC for high-performance, strongly-ty
 
 Internal Asynchronous (RabbitMQ): An event-driven approach using a message queue decouples services for background tasks and data replication, enhancing resilience.
 
-<details>
-<summary>View System Architecture Diagram</summary>
-
-graph TD
-subgraph "External Users"
-direction LR
-customer[Customer]
-admin[Admin]
-end
-
-    subgraph "System / Local Docker Environment"
-        direction TB
-
-        subgraph "User Service (Port: 8080 | gRPC: 9090)"
-            direction TB
-            userService["User Service"]
-            userDB[(User DB)]
-            userService --- userDB
-        end
-
-        subgraph "Admin Service (Port: 8081 | gRPC: 9091)"
-            direction TB
-            adminService["Admin Service"]
-            adminDB[(Admin DB)]
-            adminService --- adminDB
-        end
-
-        subgraph "Booking Service (Port: 8082 | gRPC: 9092)"
-            direction TB
-            bookingService["Booking Service"]
-            bookingDB[(Booking DB)]
-            bookingService --- bookingDB
-        end
-
-        mq((Message Queue <br> RabbitMQ))
-
-        %% --- Communication Flows ---
-        customer -- "Login (REST)" --> userService
-        userService -- "Issues JWT" --> customer
-
-        admin -- "Create Event (REST w/ JWT)" --> adminService
-        adminService -- "Publishes 'TicketsGeneratedEvent'" --> mq
-        mq -- "Consumes Event" --> bookingService
-        bookingService -- "Replicates Tickets to DB" --> bookingDB
-
-        customer -- "Book Ticket (REST w/ JWT)" --> bookingService
-        bookingService -- "Publishes 'TicketBookedEvent'" --> mq
-        mq -- "Consumes Event for Dashboard" --> adminService
-
-        %% --- Example of a less frequent, synchronous call ---
-        adminService -.->|gRPC: GetUserDetails| userService
-    end
-
-</details>
+![](C:\Users\harsh\Downloads\arch.png)
 
 Technology Stack
 Backend: Java 21, Spring Boot 3.3.3
