@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  # --- Database Services ---
+  user-db:
+    image: postgres
+    container_name: user-db
+    environment:
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "5432:5432"
+
+  admin-db:
+    image: postgres
+    container_name: admin-db
+    environment:
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "5433:5432"
+
+  booking-db:
+    image: postgres
+    container_name: booking-db
+    environment:
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "5434:5432"
+
+  # --- Message Broker ---
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"   # AMQP port for applications
+      - "15672:15672"  # Management UI port
+
+  # --- Application Services ---
+  user-service:
+    build: ./user-service
+    container_name: user-service
+    ports:
+      - "8080:8080"
+      - "9090:9090" # gRPC port
+    depends_on:
+      - user-db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://user-db:5432/postgres
+
+  admin-service:
+    build: ./admin-service
+    container_name: admin-service
+    ports:
+      - "8081:8081"
+      - "9091:9091" # gRPC port
+    depends_on:
+      - admin-db
+      - rabbitmq
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://admin-db:5432/postgres
+      - SPRING_RABBITMQ_HOST=rabbitmq
+
+  booking-service:
+    build: ./booking-service
+    container_name: booking-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - booking-db
+      - rabbitmq
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://booking-db:5432/postgres
+      - SPRING_RABBITMQ_HOST=rabbitmq
+
+networks:
+  default:
+    driver: bridge

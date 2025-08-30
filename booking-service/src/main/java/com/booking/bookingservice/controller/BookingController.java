@@ -20,8 +20,7 @@ public class BookingController {
 
     @PostMapping
     public Booking createBooking(@RequestBody CreateBookingRequest request) {
-        // In a real application, the userId would be extracted from a validated JWT.
-        // For this test, we'll hardcode a dummy userId.
+
         UUID dummyUserId = UUID.fromString("123e4567-e89b-12d3-a456-426614174000");
         return bookingLogicService.createBooking(request, dummyUserId);
     }

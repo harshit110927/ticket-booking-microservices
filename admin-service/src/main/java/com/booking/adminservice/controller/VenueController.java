@@ -18,34 +18,46 @@ public class VenueController {
 
     private final AdminLogicService adminLogicService;
 
-    // DTOs (Data Transfer Objects) for requests
+
     public record CreateVenueRequest(String name, String location) {}
     public record CreateMapRequest(String name) {}
     public record CreateSectionRequest(String name) {}
     public record CreateSeatRequest(String row, String number) {}
 
+
+    public record VenueResponse(UUID id, String name, String location, UUID tenantId) {}
+    public record MapResponse(UUID id, String name, UUID venueId) {}
+    public record SectionResponse(UUID id, String name, UUID mapId) {}
+    public record SeatResponse(UUID id, String row, String number, UUID sectionId) {}
+
+
     @PostMapping
-    public ResponseEntity<Venue> createVenue(@RequestBody CreateVenueRequest request) {
+    public ResponseEntity<VenueResponse> createVenue(@RequestBody CreateVenueRequest request) {
         UUID dummyTenantId = UUID.fromString("123e4567-e89b-12d3-a456-426614174000");
         Venue createdVenue = adminLogicService.createVenue(request, dummyTenantId);
-        return ResponseEntity.ok(createdVenue);
+        VenueResponse response = new VenueResponse(createdVenue.getId(), createdVenue.getName(), createdVenue.getLocation(), createdVenue.getTenantId());
+        return ResponseEntity.ok(response);
     }
 
     @PostMapping("/{venueId}/maps")
-    public ResponseEntity<Map> createMap(@PathVariable UUID venueId, @RequestBody CreateMapRequest request) {
+    public ResponseEntity<MapResponse> createMap(@PathVariable UUID venueId, @RequestBody CreateMapRequest request) {
         Map createdMap = adminLogicService.createMap(request, venueId);
-        return ResponseEntity.ok(createdMap);
+        MapResponse response = new MapResponse(createdMap.getId(), createdMap.getName(), createdMap.getVenue().getId());
+        return ResponseEntity.ok(response);
     }
 
     @PostMapping("/maps/{mapId}/sections")
-    public ResponseEntity<Section> createSection(@PathVariable UUID mapId, @RequestBody CreateSectionRequest request) {
+    public ResponseEntity<SectionResponse> createSection(@PathVariable UUID mapId, @RequestBody CreateSectionRequest request) {
         Section createdSection = adminLogicService.createSection(request, mapId);
-        return ResponseEntity.ok(createdSection);
+        SectionResponse response = new SectionResponse(createdSection.getId(), createdSection.getName(), createdSection.getMap().getId());
+        return ResponseEntity.ok(response);
     }
 
     @PostMapping("/sections/{sectionId}/seats")
-    public ResponseEntity<Seat> createSeat(@PathVariable UUID sectionId, @RequestBody CreateSeatRequest request) {
+    public ResponseEntity<SeatResponse> createSeat(@PathVariable UUID sectionId, @RequestBody CreateSeatRequest request) {
         Seat createdSeat = adminLogicService.createSeat(request, sectionId);
-        return ResponseEntity.ok(createdSeat);
+        SeatResponse response = new SeatResponse(createdSeat.getId(), createdSeat.getRowIdentifier(), createdSeat.getSeatNumber(), createdSeat.getSection().getId());
+        return ResponseEntity.ok(response);
     }
 }
+

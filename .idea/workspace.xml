@@ -5,33 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7bac101-32a5-46db-b1dd-f1bbdbf53e17" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ticket-booking-microservices.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/controller/EventController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/controller/ShowController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/controller/VenueController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/model/Event.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/model/Map.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/model/Seat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/model/Section.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/model/Show.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/model/Venue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/repository/EventRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/repository/MapRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/repository/SeatRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/repository/SectionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/repository/ShowRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/repository/VenueRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/service/AdminLogicService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/protoeditor.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/config/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/config/RabbitMQConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/controller/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/controller/EventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/controller/VenueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/controller/VenueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/events/TicketTransferDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/events/TicketTransferDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/model/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/model/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/model/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/repository/SeatRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/repository/SeatRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/repository/SectionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/repository/SectionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/repository/TicketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/repository/TicketRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/service/AdminLogicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-service/src/main/java/com/booking/adminservice/service/AdminLogicService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/admin-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticket-booking-microservices.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/booking/bookingservice/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/booking/bookingservice/controller/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,22 +39,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "harshit110927"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;harshit110927&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/harshit110927/ticket-booking-microservices.git",
-    "accountId": "534d79ed-adb8-4432-9662-c755762feed8"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/harshit110927/ticket-booking-microservices.git&quot;,
+    &quot;accountId&quot;: &quot;534d79ed-adb8-4432-9662-c755762feed8&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="31yjy5GDRUihmFDLMAAJRFFxiGR" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -82,11 +74,14 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.AdminServiceApplication.executor": "Run",
+    "Spring Boot.BookingServiceApplication.executor": "Run",
     "Spring Boot.UserServiceApplication.executor": "Run",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -115,6 +110,7 @@
           <value>
             <map>
               <entry key="AdminServiceApplication" value="STOPPED" />
+              <entry key="BookingServiceApplication" value="STOPPED" />
               <entry key="UserServiceApplication" value="STOPPED" />
             </map>
           </value>
@@ -122,7 +118,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
+  <component name="RunManager" selected="Spring Boot.AdminServiceApplication">
     <configuration name="AdminServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="admin-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.booking.adminservice.AdminServiceApplication" />
@@ -133,6 +129,7 @@
     <configuration name="BookingServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="booking-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.booking.bookingservice.BookingServiceApplication" />
+      <option name="VM_PARAMETERS" value="-Duser.timezone=UTC" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -150,6 +147,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.AdminServiceApplication" />
+      <item itemvalue="Spring Boot.BookingServiceApplication" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.UserServiceApplication" />
@@ -171,7 +173,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1756503459857</updated>
-      <workItem from="1756503462338" duration="1090000" />
+      <workItem from="1756503462338" duration="1861000" />
+      <workItem from="1756543822103" duration="10133000" />
     </task>
     <servers />
   </component>
